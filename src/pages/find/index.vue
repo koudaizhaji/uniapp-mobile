@@ -1,5 +1,5 @@
 <template>
-  <view class="flex flex-col flex-item-center justify-center uni-padding-top">
+  <view class="flex flex-col flex-item-center justify-center">
     <view class="text-center">
       <image class="h200rpx w200rpx mt200rpx ml-a mr-a mb50rpx" src="/static/logo.png"></image>
       <view class="flex justify-center">
@@ -7,7 +7,7 @@
         <view class="i-mdi-account text-orange-400 font-size-60rpx"></view>
       </view>
     </view>
-	  <TabBar :tabBarList="tabBarList" :selectedIndex="0"/>
+	  <TabBar :tabBarList="tabBarList" :selectedIndex="1"/>
   </view>
 </template>
 
@@ -16,8 +16,8 @@ import userCounter from '../../../store/counter.js'
 export default {
   data() {
     return {
-      title: '首页',
-	    tabBarList: userCounter().tabList,
+      title: '发现',
+	  tabBarList: userCounter().tabList,
     }
   },
   onLoad() {},

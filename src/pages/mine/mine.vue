@@ -70,16 +70,18 @@
 			@click="navigate(item.urlname)" :leftIcon="item.leftIcon"
 			:leftIconStyle="item.leftIconStyle"></uni-list-item> -->
 		</view>
-		
+		<TabBar :tabBarList="tabBarList" :selectedIndex="2"/>
 	</view>
 </template>
 
 <script>
 	// import uniListItem from "@/components/uni-ui/uni-list-item/uni-list-item.vue"
+	import userCounter from '../../../store/counter.js'
 	export default {
 		// components:{uniListItem},
 		data() {
 			return {
+				tabBarList: userCounter().tabList,
 				menuList:[ // 菜单列表
 					[{title:'小米会员',showExtraIcon:true,leftIcon:'icon-VIP',leftIconStyle:'color:#FDBF2E',urlname:'search-list'},
 					{title:'会员中心',showExtraIcon:true,leftIcon:'icon-huangguan',leftIconStyle:'color:#FCBE2D',urlname:''},
