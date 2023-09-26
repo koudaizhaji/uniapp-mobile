@@ -18,7 +18,7 @@ import {
      * 前缀组合：class="hover:(bg-gray-400 font-medium) font-(light mono)"
      * class="hover:bg-gray-400 hover:font-medium font-light font-mono"
      */
-        transformerVariantGroup,
+    transformerVariantGroup,
 } from 'unocss'
 console.log('unocss.config.ts')
 // import { FileSystemIconLoader } from '@iconify/utils/lib/loader/node-loaders'
