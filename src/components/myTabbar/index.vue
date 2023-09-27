@@ -1,6 +1,6 @@
 <template>
 	<view class="position-fixed bottom-0 flex grid-justify-around w-screen bg-white">
-		<view v-for="(item,index) in tabBarList" :key="item.pagePath" @click="handleTab(item)" class="flex flex-col flex-justify-items-center grid-items-center">
+		<view v-for="(item,index) in tabBarList" :key="item.pagePath" @click="handleTab(item)" class="flex flex-col flex-justify-items-center grid-items-center" :style="{width: (100/tabBarList.length) + '%'}">
 			<u-icon :name="item.icon"  :color="selectedIndex !== index ? '' : 'orange'" size="26"></u-icon>
 			<text :class="{'color-orange':selectedIndex === index}">{{item.text}}</text>
 		</view>
