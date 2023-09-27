@@ -21,12 +21,12 @@
 		</view>
 		<!-- body -->
 		<view class="w-100 flex flex-items-center justify-items-center py-20rpx bg-#563761 c-#eee ">
-			<view class="w-50% flex flex-col  d-flex flex-column flex-items-center justify-items-center">
+			<view class="w-50% flex flex-col flex-column flex-items-center justify-items-center">
 				<text>福利金</text>
 				<text>12.80</text>
 			</view>
 			
-			<view class="w-50% flex flex-col  d-flex flex-column flex-items-center justify-items-center">
+			<view class="w-50% flex flex-col  flex-column flex-items-center justify-items-center">
 				<text>余额</text>
 				<text>16.00</text>
 			</view>
@@ -36,7 +36,8 @@
 			<u-cell size="large" title="我的订单" value="全部订单" isLink url="/pages/componentsB/tag/tag">
 			</u-cell>
 		</u-cell-group>
-		<view class="c-#eee w-90% ">
+		<!-- <view class="c-#eee w-96% mx-a"> -->
+		<view class="c-#eee w-96% mx-a">
 			<u-grid :border="false" col="5">
             <u-grid-item v-for="(listItem,listIndex) in list" :key="listIndex">
                 <u-icon
@@ -56,16 +57,36 @@
 			</view> -->
 		</view>
 		<!-- 全局分割线 -->
-		<u-divider text="分割线" :dashed="true"></u-divider>
+		<u-divider :dashed="true"></u-divider>
 		<!-- 列表菜单 -->
-		<view v-for="(item,index) in menuList[0]" :key="item.title">
+		<view v-for="(item,index) in menuList[0]" :key="index">
+			<u-cell-group>
+				<u-cell :title="item.title" isLink>
+					<template #icon>
+						<u-icon size="32" :name="item.leftIcon" :color="item.leftIconStyle"></u-icon>
+					</template>
+					<template #value>
+						<text class="u-slot-value">99</text>
+					</template>
+				</u-cell>
+			</u-cell-group>
 			<!-- <uni-list-item :title="item.title" :showExtraIcon="item.showExtraIcon" 
 			@click="navigate(item.urlname)" :leftIcon="item.leftIcon"
 			:leftIconStyle="item.leftIconStyle"></uni-list-item> -->
 		</view>
 		<!-- 全局分割线 -->	
-		<u-divider text="分割线" :dashed="true"></u-divider>
-		<view v-for="(item,index) in menuList[1]" :key="item.title">
+		<u-divider :dashed="true"></u-divider>
+		<view v-for="(item,index) in menuList[1]" :key="index">
+			<u-cell-group>
+				<u-cell :title="item.title" isLink>
+					<template #icon>
+						<u-icon size="32" :name="item.leftIcon" :color="item.leftIconStyle"></u-icon>
+					</template>
+					<template #value>
+						<text class="u-slot-value">99</text>
+					</template>
+				</u-cell>
+			</u-cell-group>
 			<!-- <uni-list-item :title="item.title" :showExtraIcon="item.showExtraIcon"
 			@click="navigate(item.urlname)" :leftIcon="item.leftIcon"
 			:leftIconStyle="item.leftIconStyle"></uni-list-item> -->
@@ -83,11 +104,11 @@
 			return {
 				tabBarList: userCounter().tabList,
 				menuList:[ // 菜单列表
-					[{title:'小米会员',showExtraIcon:true,leftIcon:'icon-VIP',leftIconStyle:'color:#FDBF2E',urlname:'search-list'},
-					{title:'会员中心',showExtraIcon:true,leftIcon:'icon-huangguan',leftIconStyle:'color:#FCBE2D',urlname:''},
-					{title:'服务中心',showExtraIcon:true,leftIcon:'icon-service',leftIconStyle:'color:#FA6C5E',urlname:''},				
-					{title:'小米之家',showExtraIcon:true,leftIcon:'icon-home',leftIconStyle:'color:#FDBF2E',urlname:''}],
-					[{title:'更多设置',showExtraIcon:true,leftIcon:'icon-icon_set_up',leftIconStyle:'color:#9ED45A',urlname:'search'}]
+					[{title:'小米会员',showExtraIcon:true,leftIcon:'level',leftIconStyle:'#FDBF2E',urlname:'search-list'},
+					{title:'会员中心',showExtraIcon:true,leftIcon:'pause-circle',leftIconStyle:'#FCBE2D',urlname:''},
+					{title:'服务中心',showExtraIcon:true,leftIcon:'phone',leftIconStyle:'#FA6C5E',urlname:''},				
+					{title:'小米之家',showExtraIcon:true,leftIcon:'home',leftIconStyle:'#FDBF2E',urlname:''}],
+					[{title:'更多设置',showExtraIcon:true,leftIcon:'bell',leftIconStyle:'#9ED45A',urlname:'search'}]
 				],
 				list:[
 					{
@@ -126,11 +147,5 @@
 </script>
 
 <style scoped lang="scss">
-    .base-btn{
-    @apply w-200px h-40rpx center ml-a mr-a rounded bg-blue p-x-10 text-2xl text-white;
-    .shijieheping{
-        @apply w-100px h-20rpx center ml-a mr-a rounded bg-yellow font-size-12px
-    }
-}
 
 </style>

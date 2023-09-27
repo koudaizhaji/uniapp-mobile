@@ -3,7 +3,7 @@ import { resolve } from 'path'
 import {
     defineConfig,
     // 属性化模式，属性冲突时，可以通过默认un-前缀来解决：<div m-2 rounded text-teal-400 >代替class</div>
-    presetAttributify,
+    // presetAttributify,
     // 可以自定义图标转换
     presetIcons,
     presetTypography,
@@ -33,7 +33,7 @@ export default defineConfig({
     ],
     presets: [
         presetUno(),
-        presetAttributify(),
+        // presetAttributify(),
         presetIcons({
             collections: {
             	//把自己的svg文件转换为class，这里的my-icon名称随便取，使用的时候通过i-my-icon-[filename]。
