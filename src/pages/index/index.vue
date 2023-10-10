@@ -12,15 +12,17 @@
 </template>
 
 <script>
-import userCounter from '../../../store/counter.js'
+// import userCounter from '../../../store/counter.js'
+// const store = userCounter()
 export default {
   data() {
     return {
       title: '首页',
-	    tabBarList: userCounter().tabList,
+	    tabBarList: getApp().globalData.tabBarList,
     }
   },
-  onLoad() {},
+  onLoad() {
+  },
   methods: {
 	  handleTabClicked () {}
   },
