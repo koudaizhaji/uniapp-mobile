@@ -12,12 +12,11 @@
 </template>
 
 <script>
-import userCounter from '../../../store/counter.js'
 export default {
   data() {
     return {
       title: '发现',
-	  tabBarList: userCounter().tabList,
+      tabBarList: getApp().globalData.tabBarList,
     }
   },
   onLoad() {},

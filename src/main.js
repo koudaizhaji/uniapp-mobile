@@ -6,6 +6,7 @@
   import { createPinia } from 'pinia'
   import TabBar from '@/components/myTabbar/index.vue'
   import myHeader from '@/components/myHeader/index.vue';
+  import api from '@/api/index.js'
 
   
   export function createApp() {
@@ -16,6 +17,7 @@
     app.component('TabBar',TabBar);
     app.component('myHeader',myHeader);
     app.use(pinia)
+    app.config.globalProperties.$api = api;
     return {
       app,
     };

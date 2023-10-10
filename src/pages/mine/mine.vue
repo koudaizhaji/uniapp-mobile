@@ -97,12 +97,11 @@
 
 <script>
 	// import uniListItem from "@/components/uni-ui/uni-list-item/uni-list-item.vue"
-	import userCounter from '../../../store/counter.js'
 	export default {
 		// components:{uniListItem},
 		data() {
 			return {
-				tabBarList: userCounter().tabList,
+				tabBarList: getApp().globalData.tabBarList,
 				menuList:[ // 菜单列表
 					[{title:'小米会员',showExtraIcon:true,leftIcon:'level',leftIconStyle:'#FDBF2E',urlname:'search-list'},
 					{title:'会员中心',showExtraIcon:true,leftIcon:'pause-circle',leftIconStyle:'#FCBE2D',urlname:''},
