@@ -20,6 +20,13 @@
 				"navigationBarTitleText": "个人中心",
 				"navigationStyle": "custom"
 			}
+		},
+		{
+			"path": "pages/login/index",
+			"style": {
+				"navigationBarTitleText": "登录",
+				"navigationStyle": "custom"
+			}
 		}
 	],
 	"globalStyle": {
