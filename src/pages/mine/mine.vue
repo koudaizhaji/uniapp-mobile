@@ -91,11 +91,14 @@
 			@click="navigate(item.urlname)" :leftIcon="item.leftIcon"
 			:leftIconStyle="item.leftIconStyle"></uni-list-item> -->
 		</view>
+		<button @click="login">去登录</button>
 		<TabBar :tabBarList="tabBarList" :selectedIndex="2"/>
 	</view>
 </template>
 
 <script>
+import { uni } from '@dcloudio/uni-h5';
+
 	// import uniListItem from "@/components/uni-ui/uni-list-item/uni-list-item.vue"
 	export default {
 		// components:{uniListItem},
@@ -135,6 +138,11 @@
 			}
 		},
 		methods: {
+			login () {
+				uni.navigateTo({
+					url: '/pages/login/index'
+				})
+			},
 			navigate(path){
 				if(!path) return;
 				uni.navigateTo({

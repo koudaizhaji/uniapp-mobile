@@ -4,8 +4,8 @@
   // 引入全局 uView 框架
   import uviewPlus from 'uview-plus'
   import { createPinia } from 'pinia'
-  import TabBar from '@/components/myTabbar/index.vue'
-  import myHeader from '@/components/myHeader/index.vue';
+  import TabBar from '@/components/myTabbar.vue'
+  import myHeader from '@/components/myHeader.vue';
   import api from '@/api/index.js'
 
   
