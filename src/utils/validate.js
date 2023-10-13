@@ -1,6 +1,6 @@
 export default {
 	phone(phoneNum) {
-		return /^1[3456789]\d{9}$/.test(phoneNum+'');
+		return /^1[3456789]\d{9}$/.test(phoneNum + '');
 	},
 	password(password, callback = ()=>{}) {
 		const len = 8;
