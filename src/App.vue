@@ -2,9 +2,6 @@
 export default {
   onLaunch: function () {
     console.log('App Launch')
-    if (this.globalData.type === 'mp-weixin') { //小程序
-      this.wxLogin()  // 调用wx登录
-    }
   },
   onShow: function () {
     console.log('App Show')
@@ -12,29 +9,7 @@ export default {
   onHide: function () {
     console.log('App Hide')
   },
-  methods: {
-    wxLogin () {
-      uni.login({ 
-        "provider": "weixin",
-        "onlyAuthorize": true, // 微信登录仅请求授权认证
-        success: function(event){
-          const {code} = event
-          //客户端成功获取授权临时票据（code）,向业务服务器发起登录请求。
-          uni.request({
-              url: 'https://www.example.com/loginByWeixin', //仅为示例，并非真实接口地址。
-              data: {
-                  code: event.code
-              },
-              success: (res) => {
-                  //获得token完成登录
-                uni.setStorageSync('token',res.token)
-              }
-          });
-        },
-        fail: function (err) {}
-      })
-    }
-  },
+  methods: {},
   globalData:{
       type: uni.getSystemInfoSync().uniPlatform, //当前运行环境
       tabBarList: [ //自定义底部tabbar

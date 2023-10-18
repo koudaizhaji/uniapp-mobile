@@ -71,7 +71,7 @@
             changeChecked (e) {
                 this.isAgree = e.detail.value.length > 0 ? true : false
              },
-            login() {
+            async login() {
 				if (!this.isAgree) {
 					uni.showToast({
 						title: '请先勾选同意协议',
@@ -80,10 +80,23 @@
 					return;
 				}
 				const req = {
-					phoneNum: this.phoneNum,
-					passWord: this.passWord
+					username: this.phoneNum,
+					password: this.passWord
 				};
-                console.log(req)
+                if (getApp().globalData.type === 'mp-weixin') { //小程序
+                    uni.login({ 
+                        "provider": "weixin",
+                        "onlyAuthorize": true, // 微信登录仅请求授权认证
+                        success: function(event){
+                            const {code} = event
+                            console.log(code)
+                        },
+                        fail: function (err) {}
+                    })
+                } else {
+                    // const res = await this.$api.Login.login(req)
+                    // console.log(res)
+                }
 			},
         }
 	}

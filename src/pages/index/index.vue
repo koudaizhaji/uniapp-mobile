@@ -1,5 +1,5 @@
 <template>
-  <view class="flex flex-col flex-item-center justify-center uni-padding-top">
+  <!-- <view class="flex flex-col flex-item-center justify-center uni-padding-top">
     <view class="text-center">
       <image class="h200rpx w200rpx mt200rpx ml-a mr-a mb50rpx" src="/static/logo.png"></image>
       <view class="flex justify-center">
@@ -8,7 +8,9 @@
       </view>
     </view>
 	  <TabBar :tabBarList="tabBarList" :selectedIndex="0"/>
-  </view>
+  </view> -->
+    <u-swiper :list="bannerlist"></u-swiper>
+    <TabBar :tabBarList="tabBarList" :selectedIndex="0"/>
 </template>
 
 <script>
@@ -19,13 +21,15 @@ export default {
     return {
       title: '首页',
 	    tabBarList: getApp().globalData.tabBarList,
+      bannerlist: [
+          'https://cdn.uviewui.com/uview/swiper/swiper1.png',
+          'https://cdn.uviewui.com/uview/swiper/swiper2.png',
+          'https://cdn.uviewui.com/uview/swiper/swiper3.png',
+      ]
     }
   },
-  onLoad() {
-  },
-  methods: {
-	  handleTabClicked () {}
-  },
+  onLoad () {},
+  methods: {},
 }
 </script>
 
