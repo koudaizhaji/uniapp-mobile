@@ -92,6 +92,7 @@
 			:leftIconStyle="item.leftIconStyle"></uni-list-item> -->
 		</view>
 		<button @click="login">去登录</button>
+		<view class="h-20"></view>
 		<TabBar :tabBarList="tabBarList" :selectedIndex="2"/>
 	</view>
 </template>
