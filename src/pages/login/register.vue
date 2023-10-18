@@ -6,15 +6,9 @@
              <view class="m-l-2 m-r-2">+86 |</view>
              <input v-model="phoneNum" type="number" maxlength="11" placeholder="请输入手机号码" class="w-75%"/>
          </view>
-         <!-- <view class="h-10 w-80% m-l-10% border-rd-5 mt-5">
-            <u--button @click="getCode" :disabled="!validatePhoneNum" color="#F8CC00" shape="circle">获取验证码</u--button>
-         </view> -->
          <view class="flex flex-justify-left grid-items-center h-10 w-80% bg-white m-l-10% border-rd-5 mt-5">
              <input v-model="code" type="number" maxlength="6" placeholder="请输入短信验证码" class="w-70% m-l-5"/>
              <view class="flex flex-justify-center grid-items-center m-l-2 m-r-4 font-size-3 w-25% h-5 bg-rose" :class="{'color-#999 bg-rgb(248, 204, 0)':!validatePhoneNum}" @click="getCode">获取验证码</view>
-             <!-- <view class="w-35%">
-                <button :disabled="!validatePhoneNum" color="#F8CC00"  @click="getCode" >获取验证码</button>
-             </view> -->
          </view>
          <view class="flex mt-6 mb-5 m-l-10% font-size-2.5">
              <view>

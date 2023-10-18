@@ -4,9 +4,9 @@ let baseUrl = (function () {
   let urlStr = App.globalData.baseUrl;
   if (process.env.NODE_ENV === 'development') {
     console.log('开发环境')
-	urlStr = '';
+	  urlStr = 'http://koudai.develop.idushenghuo.com/';
   } else {
-	urlStr = '';
+    urlStr = 'http://koudai.develop.idushenghuo.com/';
   }
   return urlStr
 })()
@@ -53,33 +53,16 @@ class Request {
         method: method,
         header: header,
         success: (res) => {
-          //隐藏加载
-          // if (!hideLoading) {
-          //   uni.hideLoading();
-          // }
           resolve(res.data)
-          // 判断 请求是否成功 
-          //      if (res.data.code == 200) {
-          // resolve(res.data)
-          // return true;
-          //      } else {
-          //        return false;
-          //      }
+          uni.hideLoading();
         },
         //请求失败
         fail: (err) => {
           reject(err)
-          // console.log('请求失败', err);
-          // //隐藏加载
-          // if (!hideLoading) {
-          //   uni.hideLoading();
-          // }
-          // return false;
         },
         //请求完成
         complete() {
           uni.hideLoading();
-          // return;
         }
       })
     })
