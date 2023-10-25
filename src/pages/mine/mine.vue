@@ -32,12 +32,12 @@
 			</view>
 		</view>
 		<!-- 图标管理 -->
-		<u-cell-group>
+		<u-cell-group class="bg-white">
 			<u-cell size="large" title="我的订单" value="全部订单" isLink url="/pages/componentsB/tag/tag">
 			</u-cell>
 		</u-cell-group>
 		<!-- <view class="c-#eee w-96% mx-a"> -->
-		<view class="c-#eee w-96% mx-a">
+		<view class="c-#eee w-100% bg-white">
 			<u-grid :border="false" col="5">
             <u-grid-item v-for="(listItem,listIndex) in list" :key="listIndex">
                 <u-icon
@@ -59,7 +59,7 @@
 		<!-- 全局分割线 -->
 		<u-divider :dashed="true"></u-divider>
 		<!-- 列表菜单 -->
-		<view v-for="(item,index) in menuList[0]" :key="index">
+		<view v-for="(item,index) in menuList[0]" :key="index" class="bg-white">
 			<u-cell-group>
 				<u-cell :title="item.title" isLink>
 					<template #icon>
@@ -76,7 +76,7 @@
 		</view>
 		<!-- 全局分割线 -->	
 		<u-divider :dashed="true"></u-divider>
-		<view v-for="(item,index) in menuList[1]" :key="index">
+		<view v-for="(item,index) in menuList[1]" :key="index" class="bg-white">
 			<u-cell-group>
 				<u-cell :title="item.title" isLink>
 					<template #icon>
@@ -91,7 +91,7 @@
 			@click="navigate(item.urlname)" :leftIcon="item.leftIcon"
 			:leftIconStyle="item.leftIconStyle"></uni-list-item> -->
 		</view>
-		<button @click="login">去登录</button>
+		<button @click="login" class="bg-white">去登录</button>
 		<view class="h-20"></view>
 		<TabBar :tabBarList="tabBarList" :selectedIndex="2"/>
 	</view>

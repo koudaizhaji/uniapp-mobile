@@ -14,9 +14,9 @@
             <p class="color-white">登录</p>
         </view> -->
         <view class="h-10 w-80% m-l-10% border-rd-5 mt-5">
-            <u--button :disabled="!validatePhoneNumAndPwd" color="#F8CC00" shape="circle" @click="login">登录</u--button>
+            <u--button :disabled="!validatePhoneNumAndPwd" color="#fc3925" shape="circle" @click="login">登录</u--button>
          </view>
-        <view class="flex mt-6 mb-5 m-l-10% font-size-2.5">
+        <view class="flex mt-6 mb-5 m-l-10%">
 			<view>
 				<label class="flex flex-justify-left grid-items-center">
 					<checkbox-group @change="changeChecked">
@@ -24,11 +24,11 @@
                             <checkbox :checked="isAgree" style="transform:scale(0.6)" />
                         </label>
                     </checkbox-group>
-					<text class="color-#999">
+					<text>
 						<text>登录即代表同意</text>
-						<text class="color-#333">[用户协议]</text>
+						<text class="color-#004cfe">[用户协议]</text>
 						<text>和</text>
-						<text class="color-#333">[隐私政策]</text>
+						<text class="color-#004cfe">[隐私政策]</text>
 					</text>
 				</label>
 			</view>
