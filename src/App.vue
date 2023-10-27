@@ -50,7 +50,7 @@ export default {
   }
 
   uni-page-body,page{
-		background-color: #ffffff;
-    overflow: auto;
+		background-color: #f4f4f4;;
+    // overflow: auto;
 	}
 </style>
