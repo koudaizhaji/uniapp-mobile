@@ -42,7 +42,7 @@
       <view class="flex flex-col w-48%">
         <view class="h-6 flex flex-justify-between">
           <view class="font-size-4.4 font-semibold">高价回收</view>
-          <view class="mr-6 line-height-6 font-size-3">赚了￥2000</view>
+          <view class="mt-1 mr-6 line-height-6 font-size-3 flex"><view class="i-mdi-account-outline h-22px mr-0.5"></view> 赚了￥2000</view>
         </view>
         <!-- flex-grow   font-medium-->
         <view class="mt-3 flex">
@@ -55,7 +55,28 @@
         </view>
         <view class="position-relative pl-2 w-33 line-height-8 font-size-3 h-8 bg-#DAF6EE letter_spacing">更多品类高价卖 &nbsp;><view class="triangle"></view></view>
       </view>
-
+      <view class="flex flex-col w-48%">
+        <view class="flex">
+          <view>
+            <view class="font-size-4.5 font-bold">夺宝岛</view>
+            <view class="font-size-3 c-#999 mt-1">潮品一元抢购</view>
+            <view class="mt-1 w-4 h-4 line-height-4 text-center bg-#DBE0DC border-rd-50% font-bold">></view>
+          </view>
+          <view class="flex flex-grow-1 flex-justify-center flex-items-center">
+            <img class="w-10" src="../../static/images/demo/cate_07.png" >
+          </view>
+        </view>
+        <view class="flex">
+          <view>
+            <view class="font-size-4.5 font-bold">备件库</view>
+            <view class="font-size-3 c-#999 mt-1">点击发现折扣</view>
+            <view class="mt-1 w-4 h-4 line-height-4 text-center bg-#DBE0DC border-rd-50% font-bold">></view>
+          </view>
+          <view class="flex flex-grow-1 flex-justify-center flex-items-center">
+            <img class="w-10 " src="../../static/images/demo/cate_09.png" >
+          </view>
+        </view>
+      </view>
     </view>
     <!-- 轮转 -->
     <!-- <view class="w-98% h-52 bg-#fff m-l-1% m-t-2 overflow-x-scroll" style="white-space:nowrap">
