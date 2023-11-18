@@ -1,138 +1,77 @@
 <template>
   <view>
     <!-- 头部 -->
-    <view class="top relative  flex h-310rpx">
-      <!-- 右上角消息 -->
-      <!-- <view
-        class="i-dots-horizontal-circle-outline absolute top-50rpx right-20rpx text-white font-size-50rpx z-100 w-100%,"
-      >
-      </view> -->
-      <!-- <image src="../../static/images/bg.jpg" class="h-320rpx w-100%"></image> -->
-      <view class="flex flex-items-center absolute left-0 right-0 bottom-50rpx">
-        <image
-          src="../../static/images/demo/demo6.jpg"
-          class="h-145rpx w-145rpx b-solid b-5rpx b-rd-100% border-#f8f9fa ml-40rpx"
-          @click="navigate('login')"
-        ></image>
-        <view class="ml-20rpx text-white font-35rpx" @click="navigate('login')"
-          >测试昵称</view
-        >
+    <view class="top relative  flex h-420rpx">
+      <view class="flex flex-items-center absolute left-0 right-0 top-60rpx">
+        <image src="../../static/images/demo/demo6.jpg"
+          class="h-145rpx w-145rpx b-solid b-5rpx b-rd-100% border-#f8f9fa ml-40rpx" @click="navigate('login')"></image>
+        <view class="ml-20rpx text-white font-35rpx" @click="navigate('login')">测试昵称</view>
       </view>
-      <view class="flex-items-center absolute left-0 right-0 bottom-50rpx">
-        <view class="w150rpx h50rpx ml-80% mb-30rpx mt-50rpx">
-          <image
-            src="../../static/mineimg/information.png"
-            class="w50rpx h50rpx mr-15rpx"
-          ></image>
-          <image
-            src="../../static/mineimg/setting.png"
-            class="w50rpx h50rpx"
-          ></image>
+      <view class="flex-items-center absolute left-0 right-0 top-60rpx">
+        <view class="w150rpx h50rpx ml-85% mb-30rpx mt-50rpx flex">
+          <view><image src="../../static/mineimg/setting.png" class="w50rpx h50rpx"></image></view>
         </view>
         <view
-          class="flex flex-items-center justify-items-center ml-auto px-20rpx h-70rpx w31% bg-#FFD43F c-#CC4A00 rounded-tl-40rpx rounded-bl-40rpx"
-        >
-          <view
-            class="line-height-none mr-10rpx i-mdi-parachute-outline"
-          ></view>
-          会员积分 1.99
+          class="flex flex-items-center justify-items-center mt-8 ml-auto px-20rpx h-70rpx w-250rpx bg-white c-#CC4A00 rounded-tl-40rpx rounded-bl-40rpx">
+          <view class="line-height-none mr-10rpx i-mdi-diamond-stone"></view>
+          尊贵会员SVIP
         </view>
       </view>
     </view>
+    <!-- 金币 -->
+    <view class="user_coin_info">
+        <view>
+          <span>金币金额</span>
+          <image class="cover_q"
+            src="../../static/question.png" />
+        </view>
+        <view class="coin_bottom">
+          <view>
+            <view class="coin_content">
+              <image src="../../static/coin.png" alt="" />
+              <span class="user_icon">10</span>
+            </view>
+            <view class="coin_record">
+              <span>显示全部</span>
+              <image src="../../static/coin-spread.png"
+                alt="" />
+            </view>
+          </view>
+          <button class="user_coin_cash">金币提现</button>
+        </view>
+      </view>
     <!-- body -->
     <view class="w-96% m-auto">
-      <!-- <view
-        class="flex flex-items-center justify-items-center py-20rpx bg-white"
-      >
-        <view
-          class="w-48% flex flex-col flex-items-center justify-items-center"
-        >
-          <text>福利金</text>
-          <text>12.80</text>
-        </view>
-
-        <view
-          class="w-48% flex flex-col flex-items-center justify-items-center"
-        >
-          <text>余额</text>
-          <text>16.00</text>
-        </view>
-      </view> -->
-      <!-- 图标管理 -->
-      <!-- <u-cell-group class="bg-white">
-        <u-cell
-          size="large"
-          title="我的订单"
-          value="全部订单"
-          isLink
-          url="/pages/componentsB/tag/tag"
-        >
-        </u-cell>
-      </u-cell-group> -->
-      <!-- <view class="c-#eee w-96% mx-a"> -->
       <view class="grid c-#eee w-100% bg-white mb-20rpx mt-20rpx">
         <u-grid :border="true" col="4">
           <u-grid-item v-for="(listItem, listIndex) in list" :key="listIndex">
-            <u-icon
-              :customStyle="{ paddingTop: 20 + 'rpx' }"
-              :name="listItem.name"
-              :size="30"
-            ></u-icon>
-            <text class="c-#000 mt-10rpx mb-10rpx">{{ listItem.title }}</text>
+            <u-icon :customStyle="{ paddingTop: 20 + 'rpx' }" :name="listItem.name" :size="30"></u-icon>
+            <text class="c-#000 mt-10rpx mb-10rpx font-size-3">{{ listItem.title }}</text>
           </u-grid-item>
         </u-grid>
-        <!-- <view class="flex flex-item-center">
-				<view class="flex-1 flex flex-column flex-item-center justify-items-center py-30rpx" hover-class="bg-#F1F1F1"
-				v-for="i in 4" :key="i">
-					<view class="i-mdi-cog-outline font-40rpx line-h"></view>
-					<view>代付款</view>
-				</view>
-			</view> -->
       </view>
-      <!-- 全局分割线 -->
-      <!-- <u-divider :dashed="true"></u-divider> -->
-      <!-- 列表菜单 -->
 
       <view class="listIcon w100% bg-white">
-        <view
-          v-for="(item, index) in menuList[0]"
-          :key="index"
-          class="w96% m-auto"
-        >
+        <view v-for="(item, index) in menuList[0]" :key="index" class="w96% m-auto">
           <u-cell-group boder="false">
             <u-cell :title="item.title" isLink>
               <template #icon>
-                <u-icon
-                  size="26"
-                  :name="item.leftIcon"
-                  :color="item.leftIconStyle"
-                ></u-icon>
+                <u-icon size="26" :name="item.leftIcon" :color="item.leftIconStyle"></u-icon>
               </template>
               <template #value>
                 {{ item.value }}
               </template>
             </u-cell>
           </u-cell-group>
-          <!-- <uni-list-item :title="item.title" :showExtraIcon="item.showExtraIcon" 
-			@click="navigate(item.urlname)" :leftIcon="item.leftIcon"
-			:leftIconStyle="item.leftIconStyle"></uni-list-item> -->
         </view>
       </view>
       <!-- 全局分割线 -->
       <!-- <u-divider :dashed="true"></u-divider> -->
-      <view
-        v-for="(item, index) in menuList[1]"
-        :key="index"
-        class="menu bg-white mt-80rpx"
-      >
+      <view v-for="(item, index) in menuList[1]" :key="index" class="menu bg-white mt-15rpx">
         <u-cell-group>
-          <u-cell :title="item.title" isLink>
+          <u-cell :title="item.title" class="u-font-10" isLink>
             <template #icon>
-              <u-icon
-                size="32"
-                :name="item.leftIcon"
-                :color="item.leftIconStyle"
-              ></u-icon>
+              <u-icon size="32" :name="item.leftIcon" :color="item.leftIconStyle"></u-icon>
             </template>
             <template #value>
               <!-- <text class="u-slot-value">99</text>-->
@@ -153,10 +92,8 @@
 
 <script>
 import { uni } from "@dcloudio/uni-h5";
-
-// import uniListItem from "@/components/uni-ui/uni-list-item/uni-list-item.vue"
 export default {
-  // components:{uniListItem},
+
   data() {
     return {
       tabBarList: getApp().globalData.tabBarList,
@@ -243,14 +180,107 @@ export default {
 </script>
 
 <style scoped lang="scss">
-.top-left {
+body{
+  font-family: PingFang SC, PingFang SC-Regular;
 }
+
 .grid,
 .listIcon,
 .menu {
   border-radius: 15px;
 }
+
 .top {
-  background: linear-gradient(45deg, #bef000, #a0e19d);
+  background: url(../../static/bg1.png) no-repeat;
+}
+
+.user_coin_info {
+  width: 333px;
+  height: 68px;
+  margin: 18px auto;
+  margin-top: -30px;
+  background: linear-gradient(228deg, #6acffc -5%, #3a82ef);
+  border-radius: 5px;
+  box-shadow: 0px 3px 6px 0px rgba(58, 130, 239, 0.31);
+  padding: 0 29px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 12px;
+  font-family: PingFang SC, PingFang SC-Light;
+  font-weight: 300;
+  color: #ffffff;
+  position: relative;
+
+  .cover_q {
+    width: 12px;
+    height: 12px;
+    position: absolute;
+    left: 85px;
+    top: 12px;
+  }
+
+  .coin_bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    // align-items: flex-end;
+    >view {
+      display: flex;
+    }
+
+    .coin_content {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+
+      image {
+        width: 20px;
+        height: 20px;
+        margin-right: 7px;
+      }
+
+      .user_icon {
+        font-size: 26px;
+        font-family: Akrobat, Akrobat-ExtraBold;
+        font-weight: 700;
+        text-align: center;
+        color: #ffffff;
+      }
+    }
+
+    .coin_record {
+      font-size: 10px;
+      font-family: PingFang SC, PingFang SC-Light;
+      font-weight: 300;
+      text-align: right;
+      color: #ffffff;
+      margin-top: 14px;
+      margin-left: 16px;
+
+      image {
+        width: 5px;
+        height: 8px;
+        margin-left: 5px;
+      }
+
+    }
+  }
+
+  .user_coin_cash {
+    width: 80px;
+    height: 26px;
+    line-height: 26px;
+    background: #ffffff;
+    border-radius: 13px;
+    font-size: 12px;
+    font-family: PingFang SC, PingFang SC-Regular;
+    text-align: center;
+    color: #3a82ef;
+    margin: 0;
+    margin-top: 2px;
+  }
 }
 </style>

@@ -21,14 +21,14 @@ export default {
           customIcon: false, // 如果使用自定义扩展的图标库字体，需配置此值为true
           midButton: false, // 如果是凸起按钮项，需配置此值为true
         },
-        {
-          icon: "eye",
-          img: '../../static/tabbarImg/find.png',
-          text: '发现',
-          midButton: false,
-          pagePath: "/pages/find/index",
-          customIcon: false,
-        },
+        // {
+        //   icon: "eye",
+        //   img: '../../static/tabbarImg/find.png',
+        //   text: '发现',
+        //   midButton: false,
+        //   pagePath: "/pages/find/index",
+        //   customIcon: false,
+        // },
         {
           icon: "account",
           img: '../../static/tabbarImg/my.png',
