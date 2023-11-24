@@ -56,36 +56,31 @@
           <u-cell-group boder="false">
             <u-cell :title="item.title" isLink>
               <template #icon>
-                <u-icon size="26" :name="item.leftIcon" :color="item.leftIconStyle"></u-icon>
+                <u-icon size="16" :name="item.leftIcon" :color="item.leftIconStyle"></u-icon>
               </template>
-              <template #value>
+              <template size="13" #value>
                 {{ item.value }}
               </template>
             </u-cell>
           </u-cell-group>
         </view>
       </view>
-      <!-- 全局分割线 -->
-      <!-- <u-divider :dashed="true"></u-divider> -->
+
       <view v-for="(item, index) in menuList[1]" :key="index" class="menu bg-white mt-15rpx">
         <u-cell-group>
-          <u-cell :title="item.title" class="u-font-10" isLink>
+          <u-cell :title="item.title" class="u-font-9" isLink>
             <template #icon>
-              <u-icon size="32" :name="item.leftIcon" :color="item.leftIconStyle"></u-icon>
+              <u-icon size="16" :name="item.leftIcon" :color="item.leftIconStyle"></u-icon>
             </template>
-            <template #value>
-              <!-- <text class="u-slot-value">99</text>-->
+            <template size="10" #value>
               {{ item.value }}
             </template>
           </u-cell>
         </u-cell-group>
-        <!-- <uni-list-item :title="item.title" :showExtraIcon="item.showExtraIcon"
-			@click="navigate(item.urlname)" :leftIcon="item.leftIcon"
-			:leftIconStyle="item.leftIconStyle"></uni-list-item> -->
       </view>
       <button @click="login" class="bg-white mt-50rpx">去登录</button>
     </view>
-    <!-- <view class="h-20"></view> -->
+    <view class="h-20"></view>
     <TabBar :tabBarList="tabBarList" :selectedIndex="2" />
   </view>
 </template>
@@ -105,7 +100,7 @@ export default {
             value: "修改手机号和密码",
             showExtraIcon: true,
             leftIcon: "/src/static/mineimg/safe.png",
-            // leftIconStyle: "#FFFFE0",
+            leftIconStyle: "#FFFFE0",
           },
           {
             title: "推送设置",
@@ -187,7 +182,7 @@ body{
 .grid,
 .listIcon,
 .menu {
-  border-radius: 15px;
+  border-radius: 1px;
 }
 
 .top {
