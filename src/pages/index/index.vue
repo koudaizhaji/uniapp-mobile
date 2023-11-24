@@ -155,6 +155,7 @@ export default {
 }
 </script>
 <style lang="scss" scoped> 
+
 body{
     color: #000000;
     font-size: 14px;
