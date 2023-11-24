@@ -79,6 +79,22 @@
 					"titleNView": false
 				}				
 			}
+		},
+		{
+			"path": "pages/detail/index",
+			"style": {
+				// #ifdef H5
+				"titleNView": true,
+				"navigationBarBackgroundColor": "#39A692",
+				"backgroundColorTop": "#39A692",
+				"backgroundColorBottom": "#ffffff",
+				"navigationBarTitleText": "详情页",
+				// #endif			
+				"app-plus": {
+					"bounce": "vertical",
+					"titleNView": false
+				}				
+			}
 		}
 	],
 	"globalStyle": {

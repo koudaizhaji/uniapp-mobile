@@ -21,14 +21,15 @@
     </view>
     <!-- 分类 -->
     <view class="w-100% bg-#fff h-50  flex flex-wrap">
-      <view v-for="(item, index) in categoryList" :key="index"
+      <view @click="gotoDetail"
+        v-for="(item, index) in categoryList" :key="index"
         class="w-20% h-50% flex flex-col grid-justify-center items-center">
         <img :src="item.icon" class="w-15 h-15" />
         <text class="font-size-3 font-medium">{{ item.text }}</text>
       </view>
     </view>
     <!-- 轮播图 -->
-    <u-swiper :list="bannerlist"></u-swiper>
+    <u-swiper :list="bannerlist" @click="gotoDetail"></u-swiper>
 
     <!-- 卡片式 -->
     <view class="w-100% h-40 mt-4 flex flex-justify-between bg-white ">
@@ -80,9 +81,9 @@
           <view class="ml-4 mr-4 font-size-5 font-bold">严选推荐</view>
           <view class="blackBox"></view>
         </view>
-        <view class="flex justify-center bg-white pl-2 pr-2">
+        <view class="flex justify-center bg-white pl-4 pr-4">
           <ul class="flex flex-justify-between w-100% h-12 p-0">
-          <li v-for="item in optionList" :key="item.id" @click="changeColor(index)">
+          <li v-for="item in optionList" :key="item.id" @click="change(item.id)">
             <view class="font-size-4 text-center mt-3 flex flex-items-center font-semibold">
               {{ item.title }}<view :class="item.icon"></view></view>
           </li>
@@ -147,9 +148,15 @@ export default {
   },
   onLoad() { },
   methods: {
-    changeColor(index) {
-      this.activeIndex = index
-    }
+    change(index) {
+      index===1&&this.optionList[0].icon==='i-mdi-chevron-down'?this.optionList[0].icon="i-mdi-chevron-up":this.optionList[0].icon="i-mdi-chevron-down"
+      index===2&&this.optionList[1].icon==='i-mdi-chevron-down'?this.optionList[1].icon="i-mdi-chevron-up":this.optionList[1].icon="i-mdi-chevron-down"
+    },
+    gotoDetail() {
+      uni.navigateTo({
+        url: "/pages/detail/index",
+      });
+    },
   },
   components: { image }
 }
