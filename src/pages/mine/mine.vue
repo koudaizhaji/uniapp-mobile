@@ -3,43 +3,46 @@
     <!-- 头部 -->
     <view class="top relative  flex h-420rpx">
       <view class="flex flex-items-center absolute left-0 right-0 top-60rpx">
-        <image src="../../static/images/demo/demo6.jpg"
+        <image src="../../static/avter.jpg"
           class="h-145rpx w-145rpx b-solid b-5rpx b-rd-100% border-#f8f9fa ml-40rpx" @click="navigate('login')"></image>
-        <view class="ml-20rpx text-white font-35rpx" @click="navigate('login')">测试昵称</view>
+        <view class="ml-30rpx text-white font-size-4.5" @click="navigate('login')">测试昵称</view>
       </view>
       <view class="flex-items-center absolute left-0 right-0 top-60rpx">
-        <view class="w150rpx h50rpx ml-85% mb-30rpx mt-50rpx flex">
-          <view><image src="../../static/mineimg/setting.png" class="w50rpx h50rpx"></image></view>
+        <view class="w150rpx h50rpx ml-75% mb-30rpx mt-50rpx flex">
+          <view class="mr-15px">
+            <image src="../../static/mineimg/xiaoxitixing.png" class="w50rpx h50rpx"></image>
+          </view>
+          <view>
+            <image src="../../static/mineimg/shezhi.png" class="w50rpx h50rpx"></image>
+          </view>
         </view>
-        <view
+        <!-- <view
           class="flex flex-items-center justify-items-center mt-8 ml-auto px-20rpx h-70rpx w-250rpx bg-white c-#CC4A00 rounded-tl-40rpx rounded-bl-40rpx">
           <view class="line-height-none mr-10rpx i-mdi-diamond-stone"></view>
           尊贵会员SVIP
-        </view>
+        </view> -->
       </view>
     </view>
     <!-- 金币 -->
     <view class="user_coin_info">
-        <view>
-          <span>金币金额</span>
-          <image class="cover_q"
-            src="../../static/question.png" />
-        </view>
-        <view class="coin_bottom">
-          <view>
-            <view class="coin_content">
-              <image src="../../static/coin.png" alt="" />
-              <span class="user_icon">10</span>
-            </view>
-            <view class="coin_record">
-              <span>显示全部</span>
-              <image src="../../static/coin-spread.png"
-                alt="" />
-            </view>
-          </view>
-          <button class="user_coin_cash">金币提现</button>
-        </view>
+      <view>
+        <span>金币金额</span>
+        <image class="cover_q" src="../../static/question.png" />
       </view>
+      <view class="coin_bottom">
+        <view>
+          <view class="coin_content">
+            <image src="../../static/coin.png" alt="" />
+            <span class="user_icon">10</span>
+          </view>
+          <view class="coin_record">
+            <span>显示全部</span>
+            <image src="../../static/coin-spread.png" alt="" />
+          </view>
+        </view>
+        <button class="user_coin_cash">金币提现</button>
+      </view>
+    </view>
     <!-- body -->
     <view class="w-96% m-auto">
       <view class="grid c-#eee w-100% bg-white mb-20rpx mt-20rpx">
@@ -66,19 +69,7 @@
         </view>
       </view>
 
-      <view v-for="(item, index) in menuList[1]" :key="index" class="menu bg-white mt-15rpx">
-        <u-cell-group>
-          <u-cell :title="item.title" class="u-font-9" isLink>
-            <template #icon>
-              <u-icon size="16" :name="item.leftIcon" :color="item.leftIconStyle"></u-icon>
-            </template>
-            <template size="10" #value>
-              {{ item.value }}
-            </template>
-          </u-cell>
-        </u-cell-group>
-      </view>
-      <button @click="login" class="bg-white mt-50rpx">去登录</button>
+      <button @click="login" class="listIcon bg-white mt-50rpx ">去登录</button>
     </view>
     <view class="h-20"></view>
     <TabBar :tabBarList="tabBarList" :selectedIndex="2" />
@@ -122,8 +113,6 @@ export default {
             // leftIconStyle: "#FDBF2E",
             // urlname: "",
           },
-        ],
-        [
           {
             title: "推荐有礼",
             value: "邀请一人推荐获得5元优惠卷",
@@ -175,14 +164,14 @@ export default {
 </script>
 
 <style scoped lang="scss">
-body{
+body {
   font-family: PingFang SC, PingFang SC-Regular;
 }
 
 .grid,
 .listIcon,
 .menu {
-  border-radius: 1px;
+  border-radius: 5px;
 }
 
 .top {

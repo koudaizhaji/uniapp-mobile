@@ -8,10 +8,10 @@
          </view>
          <view class="flex flex-justify-left grid-items-center h-10 w-80% bg-white m-l-10% border-rd-5 mt-5">
              <input v-model="code" type="number" maxlength="6" placeholder="请输入短信验证码" class="w-70% m-l-5"/>
-             <view class="flex flex-justify-center grid-items-center m-l-2 m-r-4 font-size-3 w-25% h-6 bg-#7A7AFA border-rd-1px" :class="{'color-#fff bg-#7A7AFA':!validatePhoneNum}" @click="getCode">获取验证码</view>
+             <view class="flex flex-justify-center grid-items-center m-l-2 m-r-4 font-size-3 w-25% h-6 bg-#7A7AFA border-rd-10px" :class="{'color-#fff bg-#7A7AFA':!validatePhoneNum}" @click="getCode">获取验证码</view>
          </view>
          <view class="h-10 w-80% m-l-10% border-rd-5 mt-5">
-            <u--button :disabled="!validatePhoneNumAndPwd" color="blue" shape="circle" @click="login">登录</u--button>
+            <u--button color="#7A7AFA" shape="circle">登录</u--button>
          </view>
          <view class="flex mt-6 mb-5 m-l-10% ">
              <view>
