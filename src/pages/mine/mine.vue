@@ -1,101 +1,116 @@
 <template>
-    <view>
+    <view class="container">
         <!-- 信息页 -->
         <view class="info">
-            <view>
-                <view>头像</view>
-                <view>
-                    <view>昵称</view>
-                    <view>等级</view>
+            <view class="flex">
+                <view class="ml-4"><img class="b-5rpx b-rd-100% w-18" src="/src/static/avter.jpg"></view>
+                <view class="ml-3 w-30 h-20 mt-2">
+                    <view class="font-size-4.5 font-semibold mb-1">闪光女孩</view>
+                    <view class="flex bg-#F1C16C w-18 h-6 scale-80 b-rd-6 flex-items-center flex-justify-center">
+                        <view>
+                            <img class="h-5 w-5 mt-4px" src="/src/static/mine/VIP.png">
+                        </view>
+                        <view class="color-white font-size-3.5 ml-1">Lv3</view>
+                    </view>
                 </view>
             </view>
-            <view>
-                <view>图标1</view>
-                <view>图标2</view>
+            <view class="flex mt-2">
+                <view><img class="h-7 w-7" src="/src/static/mine/xiaoxitixing.png"></view>
+                <view class="mt-0.5 ml-2 mr-3"><img class="h-6 w-6" src="/src/static/mine/shezhi.png"></view>
             </view>
         </view>
         <!-- 卡片页 -->
         <view class="card">
-            <view>
-                <view>会员</view>
-                <view>小字</view>
+            <view class="ml-3">
+                <view class="flex">
+                    <img class="h-7 w-7" src="/src/static/mine/VIP.png">
+                    <p class="color-white font-size-5">ETC会员</p>
+                </view>
+                <view class="color-#7985B9 font-size-3">高级会员提供最新的技术支持</view>
             </view>
-            <view>续费</view>
+            <view class="w-16 h-6 line-height-6 bg-#F7D2B7 b-rd-1 color-#D67936 mr-3 font-size-3.5 text-center">去续费</view>
         </view>
         <!-- 选项页 -->
         <view class="option">
-            <view v-for="item in optionList" :key="item.id">
-                <view><img :src="item.img"></view>
-                <view>{{ item.title }}</view>
+            <view v-for="item in optionList" :key="item.id" class="w-10 h-10">
+                <view class="w-100% h-6 text-center"><img :src="item.img" :style="item.style"></view>
+                <view class="text-center">{{ item.title }}</view>
             </view>
         </view>
         <!-- 列表页 -->
         <view class="list">
-            <view v-for="item in textList" :key="item.id">
-                <view>
-                    <view><img :src="item.icon"></view>
+            <view v-for="item in textList" :key="item.id" class="flex">
+                <view class="flex">
+                    <view><img :src="item.icon" class="h-5 w-5"></view>
                     <view>{{ item.title }}</view>
                 </view>
                 <view>{{ item.text }}</view>
             </view>
         </view>
+        <!-- footer -->
+        <view class="h-20"></view>
+    <TabBar :tabBarList="tabBarList" :selectedIndex="2" />
     </view>
 </template>
   
 <script>
 import { uni } from "@dcloudio/uni-h5";
 export default {
-
     data() {
         return {
+            tabBarList: getApp().globalData.tabBarList,
             textList: [
                 {
                     id: 1,
                     title: "安全中心",
                     text: "修改手机号和密码",
-                    icon: "",
+                    icon: "/src/static/mine/anquanzhongxin.png",
                 },
                 {
                     id: 2,
                     title: "推送设置",
                     text: "订阅信息推送",
-                    icon: "",
+                    icon: "/src/static/mine/tixing.png",
                 },
                 {
                     id: 3,
                     title: "关于我们",
                     text: "当前版本V3.0.0",
-                    icon: "",
+                    icon: "/src/static/mine/guanyuwomen.png",
                 },
                 {
                     id: 4,
                     title: "帮助反馈",
                     text: "常见问题和咨询",
-                    icon: "",
+                    icon: "/src/static/mine/xiaoxi.png",
                 },
                 {
                     id: 5,
                     title: "推荐有礼",
                     text: "邀请一人推荐获得5元优惠卷",
-                    icon: "",
+                    icon: "/src/static/mine/huodongyouli.png",
                 },
             ],
             optionList: [
                 {
-                    img: "",
+                    img: "/src/static/mine/qianbao.png",
                     title: "钱包",
+                    style:"width:28px;"
                 },
                 {
-                    img: "",
+                    img: "/src/static/mine/qiche.png",
                     title: "爱车",
+                    style:"width:23px;"
                 },
                 {
-                    img: "",
+                    img: "/src/static/mine/dingdan.png",
                     title: "订单",
+                    style:"width:25px;"
                 },
                 {
-                    img: "",
+                    img: "/src/static/mine/jifenguanli.png",
                     title: "积分",
+                    style:"width:22px;"
                 },
             ],
         };
@@ -123,19 +138,36 @@ body {
     margin: 0;
     background-color: #ffffff;
 }
-
+.container{
+    position: relative;
+}
 .info {
+    width: 100%;
+    height: 232rpx;
     display: flex;
+    padding-top: 72rpx;
     justify-content: space-between;
+    background-image: linear-gradient(to right bottom, #BCE6FC,#BCE6FC, #DEF0FE, #FFFFFF, #FFFFFF);
 }
 
 .card {
     display: flex;
+    position: absolute;
+    width: 92%;
+    height: 116rpx;
+    top: 130px;
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 8px;
     justify-content: space-between;
+    align-items: center;
+    background-color: #2E4370;
 }
 
 .option {
     display: flex;
+    margin-top: 102rpx;
+    justify-content: space-around;
 }
 
 .list {}
@@ -228,5 +260,6 @@ body {
         margin: 0;
         margin-top: 2px;
     }
-}</style>
+}
+</style>
   
