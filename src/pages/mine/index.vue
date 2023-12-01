@@ -24,7 +24,7 @@
             <view class="ml-3">
                 <view class="flex">
                     <img class="h-7 w-7" src="/src/static/mine/VIP.png">
-                    <p class="color-white font-size-5">ETC会员</p>
+                    <p class="color-white font-size-4.2">ETC会员</p>
                 </view>
                 <view class="color-#7985B9 font-size-3">高级会员提供最新的技术支持</view>
             </view>
@@ -42,7 +42,7 @@
             <view v-for="item in textList" :key="item.id" class="flex flex-justify-between bg-#ffffff flex-items-center h-10 active borders">
                 <view class="flex ml-4">
                     <view class="mr-2"><img :src="item.icon" class="h-5 w-5"></view>
-                    <view class="font-size-4 font-600">{{ item.title }}</view>
+                    <view class="font-size-3.7 font-600">{{ item.title }}</view>
                 </view>
                 <view class="font-size-3 font-500 mr-3">{{ item.text }} ></view>
             </view>

@@ -1,7 +1,7 @@
 {
 	"pages": [
 		{
-			"path": "pages/index/index",
+			"path": "pages/home/index",
 			"style": {
 				// #ifdef H5
 				"titleNView": true,
@@ -16,24 +16,8 @@
 				}				
 			}
 		},
-		// {
-		// 	"path": "pages/find/index",
-		// 	"style": {
-		// 		// #ifdef H5
-		// 		"titleNView": true,
-		// 		"navigationBarBackgroundColor": "#39A692",
-		// 		"backgroundColorTop": "#39A692",
-		// 		"backgroundColorBottom": "#ffffff",
-		// 		"navigationBarTitleText": "发现",
-		// 		// #endif			
-		// 		"app-plus": {
-		// 			"bounce": "vertical",
-		// 			"titleNView": false
-		// 		}				
-		// 	}
-		// },
 		{
-			"path": "pages/mine/mine",
+			"path": "pages/mine/index",
 			"style": {
 				// #ifdef H5
 				"titleNView": true,
