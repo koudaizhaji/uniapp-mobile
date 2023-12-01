@@ -1,6 +1,6 @@
 <template>
     <view class="">
-         <p class="mt-10 mb-2 font-size-6 font-medium text-center">欢迎登录xxxxx</p>
+         <p class="mt-10 mb-2 font-size-6 font-medium text-center">欢迎登录本系统</p>
          <p class="mb-10 font-size-3 text-center color-coolgray">未注册的手机号验证后自动创建账号</p>
          <view class="flex flex-justify-left grid-items-center h-10 w-80% bg-white m-l-10% border-rd-5">
              <view class="m-l-2 m-r-2">+86 |</view>
@@ -8,7 +8,10 @@
          </view>
          <view class="flex flex-justify-left grid-items-center h-10 w-80% bg-white m-l-10% border-rd-5 mt-5">
              <input v-model="code" type="number" maxlength="6" placeholder="请输入短信验证码" class="w-70% m-l-5"/>
-             <view class="flex flex-justify-center grid-items-center m-l-2 m-r-4 font-size-3 w-25% h-5 bg-rose" :class="{'color-#fff bg-rgb(248, 204, 0)':!validatePhoneNum}" @click="getCode">获取验证码</view>
+             <view class="flex flex-justify-center grid-items-center m-l-2 m-r-4 font-size-3 w-25% h-6 bg-#7A7AFA border-rd-10px" :class="{'color-#fff bg-#7A7AFA':!validatePhoneNum}" @click="getCode">获取验证码</view>
+         </view>
+         <view class="h-10 w-80% m-l-10% border-rd-5 mt-5">
+            <u--button color="#7A7AFA" shape="circle">登录</u--button>
          </view>
          <view class="flex mt-6 mb-5 m-l-10% ">
              <view>
@@ -18,7 +21,7 @@
                             <checkbox :checked="isAgree" style="transform:scale(0.6)" />
                         </label>
                     </checkbox-group>
-                     <text>
+                     <text style="font-size: 13px;">
                          <text>登录即代表同意</text>
                          <text class="color-#004cfe">[用户协议]</text>
                          <text>和</text>

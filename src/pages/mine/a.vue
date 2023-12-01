@@ -32,7 +32,7 @@
         </view>
         <!-- 选项页 -->
         <view class="option">
-            <view v-for="item in optionList" :key="item.id" class="w-10 h-10">
+            <view v-for="item in optionList" :key="item.id" class="w-15 h-15 ">
                 <view class="w-100% h-6 text-center"><img :src="item.img" :style="item.style"></view>
                 <view class="text-center mt-1">{{ item.title }}</view>
             </view>
@@ -48,8 +48,8 @@
             </view>
         </view>
         <!-- footer -->
-        <view class="h-23 bg-#f4f4f4 flex flex-justify-center">
-            <view class="bg-white b-rd-1 w-90px h-30px text-center line-height-30px mt-10 font-size-3.5">客服入口</view>
+        <view class="h-40 bg-#f4f4f4 flex flex-justify-center">
+            <view class="bg-white b-rd-1 w-90px h-30px text-center line-height-30px mt-16 font-size-3.5">客服入口</view>
         </view>
     <TabBar :tabBarList="tabBarList" :selectedIndex="1" />
     </view>
@@ -146,7 +146,7 @@ body {
     position: relative;
 }
 .active:hover{
-    background-color: #DEF0FE;
+    background-color: #EDF7FE;
 }
 .borders{
     width: 96%;
@@ -185,7 +185,6 @@ body {
 }
 
 .list {
-    margin-top: 40rpx;
     padding-top: 10px;
     height: auto;
     background-color: #f4f4f4;

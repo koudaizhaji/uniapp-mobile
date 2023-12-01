@@ -16,22 +16,22 @@
 				}				
 			}
 		},
-		{
-			"path": "pages/find/index",
-			"style": {
-				// #ifdef H5
-				"titleNView": true,
-				"navigationBarBackgroundColor": "#39A692",
-				"backgroundColorTop": "#39A692",
-				"backgroundColorBottom": "#ffffff",
-				"navigationBarTitleText": "发现",
-				// #endif			
-				"app-plus": {
-					"bounce": "vertical",
-					"titleNView": false
-				}				
-			}
-		},
+		// {
+		// 	"path": "pages/find/index",
+		// 	"style": {
+		// 		// #ifdef H5
+		// 		"titleNView": true,
+		// 		"navigationBarBackgroundColor": "#39A692",
+		// 		"backgroundColorTop": "#39A692",
+		// 		"backgroundColorBottom": "#ffffff",
+		// 		"navigationBarTitleText": "发现",
+		// 		// #endif			
+		// 		"app-plus": {
+		// 			"bounce": "vertical",
+		// 			"titleNView": false
+		// 		}				
+		// 	}
+		// },
 		{
 			"path": "pages/mine/mine",
 			"style": {
@@ -73,6 +73,22 @@
 				"backgroundColorTop": "#39A692",
 				"backgroundColorBottom": "#ffffff",
 				"navigationBarTitleText": "验证码登录",
+				// #endif			
+				"app-plus": {
+					"bounce": "vertical",
+					"titleNView": false
+				}				
+			}
+		},
+		{
+			"path": "pages/detail/index",
+			"style": {
+				// #ifdef H5
+				"titleNView": true,
+				"navigationBarBackgroundColor": "#39A692",
+				"backgroundColorTop": "#39A692",
+				"backgroundColorBottom": "#ffffff",
+				"navigationBarTitleText": "详情页",
 				// #endif			
 				"app-plus": {
 					"bounce": "vertical",
