@@ -1,19 +1,16 @@
 <template>
-   <view>详情页</view> 
+  <view>详情页</view>
 </template>
-  
-  <script>
-  export default {
-    data() {
-      return {
 
-      }
-    },
-    methods: {
+<script>
+export default {
+  data() {
+    return {
 
-    },
-  }
-  </script>
-  
-  
-  
+    };
+  },
+  methods: {
+
+  },
+};
+</script>
