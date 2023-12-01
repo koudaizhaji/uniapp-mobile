@@ -125,8 +125,8 @@ export default {
         { id: 4, title: '筛选', icon: 'i-mdi-filter-settings-outline' }
       ],
       bannerlist: [
-        'https://cdn.uviewui.com/uview/swiper/swiper2.png',
-        'https://cdn.uviewui.com/uview/swiper/swiper3.png',
+        '/src/static/swiper/swiper1.png',
+        '/src/static/swiper/swiper2.png',
       ],
       categoryList: [
         { icon: '../../static/images/demo/cate_01.png', text: '手机数码' },
@@ -180,8 +180,8 @@ export default {
    width: 100px;
    height: 15px;
    border-radius: 9px;
-   //  background-color: #BFEF05;
-   background-color: #aee7ff;
+   background-color: #BFEF05;
+   /* background-color: #aee7ff; */
    margin: 10px 0;
    margin-left: 10px;
 
